@@ -12,7 +12,9 @@ class Carro : public ProdutoDuravel {
 		string placa;
 
 	public:
-		Carro(string modelo, string cor, string placa);
+		Carro(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+				string materialPredominante, int durabilidade,
+					string modelo, string cor, string placa);
 	 	Carro();
 	 	~Carro();
 

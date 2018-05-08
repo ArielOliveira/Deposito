@@ -1,7 +1,7 @@
 #include "produto.hpp"
 
 Produto::Produto(string nome, string marca, string descricao, string dataFabricacao, double preco): 
-	nome(nome), marca(marca), descricao(descricao), dataFabricacao(dataFabricacao), preco(preco) {}
+					nome(nome), marca(marca), descricao(descricao), dataFabricacao(dataFabricacao), preco(preco) {}
 
 Produto::Produto() {
 	nome = "";

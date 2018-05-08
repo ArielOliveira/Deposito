@@ -12,7 +12,9 @@ class Pizza : public ProdutoNaoDuravel {
 		int numFatias;
 
 	public:
-		Pizza(string sabor, int numFatias);
+		Pizza(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+				string dataValidade, string genero,
+					string sabor, int numFatias);
 	 	Pizza();
 	 	~Pizza();
 

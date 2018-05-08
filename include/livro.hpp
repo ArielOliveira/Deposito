@@ -11,10 +11,12 @@ class Livro : public ProdutoDuravel {
 		string titulo;
 		string autor;
 		string genero;
-		int numPaginas;
 
+		int numPaginas;
 	public:
-		Livro(string titulo, string autor, string genero, int numPaginas);
+		Livro(string nome, string marca, string descricao, string dataFabricacao, double preco,
+				string materialPredominante, int durabilidade, 
+					string titulo, string autor, string genero, int numPaginas);
 	 	Livro();
 	 	~Livro();
 		
@@ -29,7 +31,6 @@ class Livro : public ProdutoDuravel {
 
 		void setNumPaginas(int numPaginas);
 		int getNumPaginas();
-
 };
 
 #endif

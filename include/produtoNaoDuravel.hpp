@@ -13,7 +13,8 @@ class ProdutoNaoDuravel : public Produto {
 		string genero;
 
 	public:
-		ProdutoNaoDuravel(string dataValidade, string genero);
+		ProdutoNaoDuravel(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+							string dataValidade, string genero);
 	 	ProdutoNaoDuravel();
 	 	~ProdutoNaoDuravel();
 

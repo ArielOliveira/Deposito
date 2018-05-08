@@ -1,7 +1,10 @@
 #include "celular.hpp"
 
-Celular::Celular(string modelo, string fabricante, int armazenamento) : 
-					modelo(modelo), fabricante(fabricante), armazenamento(armazenamento) {}
+Celular::Celular(string nome, string marca, string descricao, string dataFabricacao, double preco,
+					string materialPredominante, int durabilidade,
+						string modelo, string fabricante, int armazenamento) : 
+							ProdutoDuravel(nome, marca, descricao, dataFabricacao, preco, materialPredominante, durabilidade),
+								modelo(modelo), fabricante(fabricante), armazenamento(armazenamento) {}
 
 Celular::Celular()
 {

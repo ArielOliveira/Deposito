@@ -12,7 +12,9 @@ class Refrigerante : public ProdutoNaoDuravel {
 		double volume;
 
 	public:
-		Refrigerante(string sabor, double volume);
+		Refrigerante(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+						string dataValidade, string genero,
+							string sabor, double volume);
 	  	Refrigerante();
 	 	~Refrigerante();
 

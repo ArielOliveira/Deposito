@@ -1,7 +1,8 @@
 #include "produtoDuravel.hpp"
 
-ProdutoDuravel::ProdutoDuravel(string materialPredominante, int durabilidade):
-								materialPredominante(materialPredominante), durabilidade(durabilidade) {}
+ProdutoDuravel::ProdutoDuravel(string nome, string marca, string descricao, string dataFabricacao, double preco,
+								string materialPredominante, int durabilidade) :
+									Produto(nome, marca, descricao, dataFabricacao, preco) {}
 
 ProdutoDuravel::ProdutoDuravel() {
 	materialPredominante = "";

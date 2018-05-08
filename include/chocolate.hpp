@@ -11,7 +11,9 @@ class Chocolate : public ProdutoNaoDuravel {
 		string fabricante;
 
 	public:
-		Chocolate(string tipo, string fabricante);
+		Chocolate(string nome, string marca, string descricao, string dataFabricacao, double preco,
+					string dataValidade, string genero, 
+						string tipo, string fabricante);
 	  	Chocolate();
 	 	~Chocolate();
 

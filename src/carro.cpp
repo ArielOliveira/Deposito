@@ -1,7 +1,10 @@
 #include "carro.hpp"
 
-Carro::Carro(string modelo, string cor, string placa): 
-	modelo(modelo), cor(cor), placa(placa) {}
+Carro::Carro(string nome, string marca, string descricao, string dataFabricacao, double preco,
+				string materialPredominante, int durabilidade, 
+					string modelo, string cor, string placa) : 
+						ProdutoDuravel(nome, marca, descricao, dataFabricacao, preco, materialPredominante, durabilidade), 
+							modelo(modelo), cor(cor), placa(placa) {}
 
 Carro::Carro() {
 	modelo = "";

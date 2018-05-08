@@ -14,7 +14,9 @@ class Celular : public ProdutoDuravel {
 		int armazenamento;
 
 	public:
-		Celular(string modelo, string fabricante, int armazenamento);
+		Celular(string nome, string marca, string descricao, string dataFabricacao, double preco,
+					string materialPredominante, int durabilidade,
+						string modelo, string fabricante, int armazenamento);
 	 	Celular();
 	 	~Celular();
 

@@ -1,6 +1,9 @@
 #include "produtoNaoDuravel.hpp"
 
-ProdutoNaoDuravel::ProdutoNaoDuravel(string dataValidade, string genero) : dataValidade(dataValidade), genero(genero) {}
+ProdutoNaoDuravel::ProdutoNaoDuravel(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+										string dataValidade, string genero) : 
+											Produto(nome, marca, descricao, dataFabricacao, preco), 
+												dataValidade(dataValidade), genero(genero) {}
 
 ProdutoNaoDuravel::ProdutoNaoDuravel()
 {

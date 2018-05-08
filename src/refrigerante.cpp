@@ -4,7 +4,11 @@
 #include <string>
 using std::string;
 
-Refrigerante::Refrigerante(string sabor, double volume) : sabor(sabor), volume(volume) {}
+Refrigerante::Refrigerante(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+								string dataValidade, string genero,
+									string sabor, double volume) : 
+										ProdutoNaoDuravel(nome, marca, descricao, dataFabricacao, preco, dataValidade, genero), 
+											sabor(sabor), volume(volume) {}
 
 Refrigerante::Refrigerante()
 {

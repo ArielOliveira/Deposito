@@ -1,7 +1,10 @@
 #include "chocolate.hpp"
 
-Chocolate::Chocolate(string tipo, string fabricante): 
-	tipo(tipo), fabricante(fabricante) {}
+Chocolate::Chocolate(string nome, string marca, string descricao, string dataFabricacao, double preco,
+						string dataValidade, string genero, 
+							string tipo, string fabricante): 
+								ProdutoNaoDuravel(nome, marca, descricao, dataFabricacao, preco, dataValidade, genero), 
+									tipo(tipo), fabricante(fabricante) {}
 
 Chocolate::Chocolate() {
 	tipo = "";

@@ -1,7 +1,10 @@
 #include "livro.hpp"
 
-Livro::Livro(string titulo, string autor, string genero, int numPaginas): 
-				titulo(titulo), autor(autor), genero(genero), numPaginas(numPaginas) {}
+Livro::Livro(string nome, string marca, string descricao, string dataFabricacao, double preco,
+				string materialPredominante, int durabilidade, 
+					string titulo, string autor, string genero, int numPaginas): 
+						ProdutoDuravel(nome, marca, descricao, dataFabricacao, preco, materialPredominante, durabilidade),
+							titulo(titulo), autor(autor), genero(genero), numPaginas(numPaginas) {}
 
 Livro::Livro() {
 	titulo = "";
