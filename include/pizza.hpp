@@ -12,12 +12,15 @@ class Pizza : public ProdutoNaoDuravel {
 		int numFatias;
 
 	public:
-		string getSabor();
-		int getNumFatias();
-		void setSabor(string sabor);
-		void setNumFatias(int numFatias);
+		Pizza(string sabor, int numFatias);
 	 	Pizza();
 	 	~Pizza();
+
+		void setSabor(string sabor);
+		string getSabor();
+
+		void setNumFatias(int numFatias);
+		int getNumFatias();
 
 };
 

@@ -1,10 +1,7 @@
 #include "celular.hpp"
 
-#include <iostream>
-#include <string>
-using std::string;
-
-Celular::Celular(string modelo, string fabricante) : modelo(modelo), fabricante(fabricante) {}
+Celular::Celular(string modelo, string fabricante, int armazenamento) : 
+					modelo(modelo), fabricante(fabricante), armazenamento(armazenamento) {}
 
 Celular::Celular()
 {

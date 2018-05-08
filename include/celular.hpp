@@ -1,7 +1,6 @@
 #ifndef CELULAR_HPP
 #define CELULAR_HPP
 
-#include <iostream>
 #include <string>
 using std::string;
 
@@ -15,14 +14,18 @@ class Celular : public ProdutoDuravel {
 		int armazenamento;
 
 	public:
-		string getModelo();
-		string getFabricante();
-		int getArmazenamento();
-		void setModelo(string modelo);
-		void setFabricante(string fabricante);
-		void setArmazenamento(int armazenamento);
+		Celular(string modelo, string fabricante, int armazenamento);
 	 	Celular();
 	 	~Celular();
+
+		void setModelo(string modelo);
+		string getModelo();
+
+		void setFabricante(string fabricante);
+		string getFabricante();
+
+		void setArmazenamento(int armazenamento);
+		int getArmazenamento();
 
 };
 

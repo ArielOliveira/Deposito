@@ -1,10 +1,11 @@
 #ifndef PRODUTO_NAO_DURAVEL_HPP
 #define PRODUTO_NAO_DURAVEL_HPP
 
-#include <iostream>
 #include <string>
+using std::string;
+
 #include "produto.hpp"
-using namespace std;
+
 
 class ProdutoNaoDuravel : public Produto {
 	private:
@@ -12,12 +13,16 @@ class ProdutoNaoDuravel : public Produto {
 		string genero;
 
 	public:
-		string getDataValidade();
-		int getGenero();
-		void setDataValidade(string dataValidade);
-		void setGenero(int genero);
+		ProdutoNaoDuravel(string dataValidade, string genero);
 	 	ProdutoNaoDuravel();
 	 	~ProdutoNaoDuravel();
+
+		void setDataValidade(string dataValidade);
+		string getDataValidade();
+
+		void setGenero(string genero);
+		string getGenero();
+		
 
 };
 

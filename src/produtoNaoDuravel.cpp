@@ -1,9 +1,5 @@
 #include "produtoNaoDuravel.hpp"
 
-#include <iostream>
-#include <string>
-using std::string;
-
 ProdutoNaoDuravel::ProdutoNaoDuravel(string dataValidade, string genero) : dataValidade(dataValidade), genero(genero) {}
 
 ProdutoNaoDuravel::ProdutoNaoDuravel()

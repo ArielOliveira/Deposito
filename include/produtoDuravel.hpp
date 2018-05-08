@@ -12,12 +12,15 @@ class ProdutoDuravel : public Produto {
 		int durabilidade;
 
 	public:
-		string getMaterialPredominante();
-		int getDurabilidade();
-		void setMaterialPredominante(string materialPredominante);
-		void setDurabilidade(int durabilidade);
+		ProdutoDuravel(string materialPredominante, int durabilidade);
 	 	ProdutoDuravel();
 	 	~ProdutoDuravel();
+
+		void setDurabilidade(int durabilidade);
+		int getDurabilidade();
+
+		void setMaterialPredominante(string materialPredominante);
+		string getMaterialPredominante();
 
 };
 

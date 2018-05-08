@@ -12,14 +12,18 @@ class Carro : public ProdutoDuravel {
 		string placa;
 
 	public:
-		string getModelo();
-		string getPlaca();
-		string getCor();
-		void setModelo(string modelo);
-		void setPlaca(string placa);
-		void setCor(string cor);
+		Carro(string modelo, string cor, string placa);
 	 	Carro();
 	 	~Carro();
+
+		void setModelo(string modelo);
+		string getModelo();
+
+		void setPlaca(string placa);
+		string getPlaca();
+
+		void setCor(string cor);
+		string getCor();
 
 };
 

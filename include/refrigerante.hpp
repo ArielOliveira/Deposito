@@ -12,12 +12,15 @@ class Refrigerante : public ProdutoNaoDuravel {
 		double volume;
 
 	public:
-		string getSabor();
-		double getVolume();
-		void setSabor(string sabor);
-		void setVolume(double volume);
+		Refrigerante(string sabor, double volume);
 	  	Refrigerante();
 	 	~Refrigerante();
+
+		void setSabor(string sabor);
+		string getSabor();
+
+		void setVolume(double volume);
+		double getVolume();
 
 };
 

@@ -21,5 +21,5 @@ string Livro::getAutor() {return autor;}
 void Livro::setGenero(string genero) {this->genero = genero;}
 string Livro::getGenero() {return genero;}
 
-void Livro::setNumPaginas(int numPaginas) {this->numPaginas;}
+void Livro::setNumPaginas(int numPaginas) {this->numPaginas = numPaginas;}
 int Livro::getNumPaginas() {return numPaginas;}

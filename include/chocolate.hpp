@@ -11,12 +11,15 @@ class Chocolate : public ProdutoNaoDuravel {
 		string fabricante;
 
 	public:
-		string getTipo();
-		string getFabricante();
-		void setTipo(string tipo);
-		void setFabricante(string fabricante);
+		Chocolate(string tipo, string fabricante);
 	  	Chocolate();
 	 	~Chocolate();
+
+		void setTipo(string tipo);
+		string getTipo();
+		
+		void setFabricante(string fabricante);
+		string getFabricante();
 
 };
 

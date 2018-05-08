@@ -14,16 +14,21 @@ class Livro : public ProdutoDuravel {
 		int numPaginas;
 
 	public:
-		string getTitulo();
-		string getAutor();
-		string getGenero();
-		int getNumPaginas();
-		void setTitulo(string titulo);
-		void setAutor(string autor);
-		void setGenero(string genero);
-		void setNumPaginas(int numPaginas);
+		Livro(string titulo, string autor, string genero, int numPaginas);
 	 	Livro();
 	 	~Livro();
+		
+		void setTitulo(string titulo);
+		string getTitulo();
+
+		void setAutor(string autor);
+		string getAutor();
+
+		void setGenero(string genero);
+		string getGenero();
+
+		void setNumPaginas(int numPaginas);
+		int getNumPaginas();
 
 };
 
