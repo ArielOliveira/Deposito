@@ -4,7 +4,7 @@ CC = g++
 
 CPPFLAGS = -Wall -pedantic -ansi -std=c++11
 
-OBJS = ./build/main.o ./build/produto.o ./build/produtoDuravel.o ./build/produtoNaoDuravel.o ./build/carro.o ./build/celular.o ./build/chocolate.o ./build/livro.o ./build/pizza.o ./build/refrigerante.o
+OBJS = ./build/main.o ./build/deposito.o ./build/produto.o ./build/produtoDuravel.o ./build/produtoNaoDuravel.o ./build/carro.o ./build/celular.o ./build/chocolate.o ./build/livro.o ./build/pizza.o ./build/refrigerante.o
 
 lista: $(lista)
 
@@ -13,6 +13,9 @@ $(lista): $(OBJS)
 	$(CC) $^ $(CPPFLAGS) -o $@
 
 ./build/main.o: ./src/main.cpp ./include/lista.hpp
+	$(CC) -c $(CPPFLAGS) $<	-o $@
+
+./build/deposito.o: ./src/deposito.cpp ./include/deposito.hpp
 	$(CC) -c $(CPPFLAGS) $<	-o $@
 
 ./build/produto.o: ./src/produto.cpp ./include/produto.hpp
