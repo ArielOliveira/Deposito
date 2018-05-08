@@ -8,12 +8,13 @@ using std::string;
 class Produto{
 	private:
 		string nome;
-		double preco;
 		string marca;
 		string descricao;
 		string dataFabricacao;
 
+		double preco;
 	public:
+		Produto(string nome, string marca, string descricao, string dataFabricacao, double preco);
 	 	Produto();
 	 	~Produto();
 

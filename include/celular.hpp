@@ -11,6 +11,7 @@ class Celular : public ProdutoDuravel {
 	private:
 		string modelo;
 		string fabricante;
+
 		int armazenamento;
 
 	public:
