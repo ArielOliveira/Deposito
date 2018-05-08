@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include "produtoDuravel.hpp"
-using namespace std;
 
 class Carro : public ProdutoDuravel {
 	private:

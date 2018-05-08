@@ -31,7 +31,7 @@ class List {
 		~List();
 
 		void insertAtHead(T data);
-		void insertDoCuProRabo(T data);
+		void insertAtTail(T data);
 		bool insertAt(int index, T data);
 
 		bool removeAtHead();

@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
+using std::string;
+
 #include "produtoDuravel.hpp"
-using namespace std;
 
 class Celular : public ProdutoDuravel {
 	private:
