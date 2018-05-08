@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include "produtoNaoDuravel.hpp"
-using namespace std;
 
 class Chocolate : public ProdutoNaoDuravel {
 	private:
