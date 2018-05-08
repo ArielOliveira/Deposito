@@ -4,6 +4,9 @@
 #include <string>
 using std::string;
 
+#include <ostream>
+using std::ostream;
+
 #include "produto.hpp"
 
 
@@ -24,7 +27,7 @@ class ProdutoNaoDuravel : public Produto {
 		void setGenero(string genero);
 		string getGenero();
 		
-
+		friend ostream& operator<< (ostream &o, ProdutoNaoDuravel const _produtoNaoDuravel);
 };
 
 #endif

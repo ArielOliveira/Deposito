@@ -93,7 +93,7 @@ void List<T>::insertAtTail(T data) {
 
 template <typename T>
 bool List<T>::insertAt(int index, T data) {
-	if (index > size || index < 0) return false;
+	if (index > size || index < 1) return false;
 
 	Node<T> *inserted = new Node<T>(data);
 	inserted->next = NULL;
@@ -133,7 +133,7 @@ bool List<T>::removeAtTail() {
 
 template <typename T>
 bool List<T>::removeAt(int index) {
-	if (index > size || index < 0) return false;
+	if (index > size || index < 1) return false;
 
 	Node<T> *sentry;
 

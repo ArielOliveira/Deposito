@@ -5,10 +5,10 @@ Produto::Produto(string nome, string marca, string descricao, string dataFabrica
 
 Produto::Produto() {
 	nome = "";
-	preco = 0;
 	marca = "";
 	descricao = "";
 	dataFabricacao = "";
+	preco = 0;
 }
 
 Produto::~Produto() {}
@@ -27,3 +27,13 @@ string Produto::getDescricao() {return descricao;}
 
 void Produto::setDataFabricacao(string dataFabricacao) {this->dataFabricacao = dataFabricacao;}
 string Produto::getDataFabricacao() {return dataFabricacao;}
+
+ostream& operator<< (ostream &o, Produto const _produto) {
+	o << _produto.nome << endl
+	  << _produto.marca << endl	
+	  << _produto.descricao << endl
+	  << _produto.dataFabricacao << endl
+	  << _produto.preco << endl;
+
+	return o;
+}

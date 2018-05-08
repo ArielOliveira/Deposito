@@ -2,10 +2,15 @@
 #define PRODUTO_HPP
 
 #include <iostream>
+using std::endl;
+
 #include <string>
 using std::string;
 
-class Produto{
+#include <ostream>
+using std::ostream;
+
+class Produto {
 	private:
 		string nome;
 		string marca;
@@ -32,6 +37,9 @@ class Produto{
 
 		void setDataFabricacao(string dataFabricacao);
 		string getDataFabricacao();
+
+		friend ostream& operator<< (ostream &o, Produto const _produto);
 };
+
 
 #endif

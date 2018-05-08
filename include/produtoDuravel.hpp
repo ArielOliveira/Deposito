@@ -3,6 +3,9 @@
 
 #include "produto.hpp"
 
+#include <ostream>
+using std::ostream;
+
 #include <string>
 using std::string;
 
@@ -23,6 +26,7 @@ class ProdutoDuravel : public Produto {
 		void setMaterialPredominante(string materialPredominante);
 		string getMaterialPredominante();
 
+		friend ostream& operator<< (ostream &o, ProdutoDuravel const _produtoDuravel);
 };
 
 #endif

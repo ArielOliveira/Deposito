@@ -5,6 +5,9 @@
 #include <string>
 #include "produtoDuravel.hpp"
 
+#include <ostream>
+using std::ostream;
+
 class Carro : public ProdutoDuravel {
 	private:
 		string modelo;
@@ -27,6 +30,7 @@ class Carro : public ProdutoDuravel {
 		void setCor(string cor);
 		string getCor();
 
+		friend ostream& operator<< (ostream &o, Carro const _carro);
 };
 
 #endif

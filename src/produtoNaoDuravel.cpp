@@ -18,3 +18,11 @@ string ProdutoNaoDuravel::getDataValidade() { return dataValidade; }
 
 void ProdutoNaoDuravel::setGenero(string genero) { this->genero = genero; }
 string ProdutoNaoDuravel::getGenero() { return genero; }
+
+ostream& operator<< (ostream &o, ProdutoNaoDuravel const _produtoNaoDuravel) {
+	o << (Produto)_produtoNaoDuravel << endl
+	  << _produtoNaoDuravel.dataValidade << endl
+	  << _produtoNaoDuravel.genero << endl;
+
+	return o;
+}

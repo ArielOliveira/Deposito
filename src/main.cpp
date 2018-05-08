@@ -1,10 +1,17 @@
 #include <iostream>
 
 #include "lista.hpp"
-#include "produto.hpp"
+#include "carro.hpp"
 
 int main() {
-	List<Produto> *l = new List<Produto>();
+	List<Carro> *l = new List<Carro>();
+
+	l->insertAtHead(Carro("carro", "eita", "qlrcoisa", "fudeu", 33.32, "string", 1, "chevett", "azul", "xibata"));
+
+	l->removeAt(1);
+	
+	l->printList();
+
 
 	return 0;
 }

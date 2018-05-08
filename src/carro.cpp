@@ -22,3 +22,12 @@ string Carro::getCor() {return cor;}
 
 void Carro::setPlaca(string placa) {this->placa = placa;}
 string Carro::getPlaca() {return placa;}
+
+ostream& operator<< (ostream &o, Carro const _carro) {
+	o << (ProdutoDuravel)_carro << endl
+	  << _carro.modelo << endl
+	  << _carro.cor << endl
+	  << _carro.placa << endl;
+
+	return o;
+}
