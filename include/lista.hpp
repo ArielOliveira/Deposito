@@ -40,8 +40,11 @@ class List {
 
 		T getData(int index);
 
+		int getSize();
+
 		void deleteList();
 		void printList();
+
 };
 
 template <typename T>
@@ -156,6 +159,9 @@ T List<T>::getData(int index) {
 	}
 		return sentry->data;
 }
+
+template <typename T>
+int List<T>::getSize() {return size;}
 
 template <typename T>
 void List<T>::printList() {
