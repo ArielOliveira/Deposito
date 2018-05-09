@@ -129,13 +129,13 @@ void cadastrarProdutoMenu()
 		switch (produtoNaoDuravel)
 		{
 		case 1: //cadastrar pizza
-			cadastrarPizza();
+			// cadastrarPizza();
 			break;
 		case 2: //cadastrar chocolate
 			cadastrarChocolate();
 			break;
 		case 3: //cadastrar refrigerante
-			cadastrarRefrigerante();
+			// cadastrarRefrigerante();
 			break;
 		default:
 			cout << "Opção Inválida." << endl;
@@ -341,7 +341,7 @@ void cadastrarChocolate()
 	cout << "Digite fabricante do Chocolate: " << endl;
 	getline(cin, str);
 	stringstream(str) >> dadoDigitado;
-	novoChocolate->setCor(dadoDigitado);
+	novoChocolate->setFabricante(dadoDigitado);
 
 	//dataValidade
 	cout << "Digite a data de validade do Chocolate: " << endl;
@@ -352,7 +352,7 @@ void cadastrarChocolate()
 	cout << "Digite o genero do Chocolate: " << endl;
 	getline(cin, str);
 	stringstream(str) >> dadoDigitado;
-	novoChocolate->setGenero();
+	novoChocolate->setGenero(dadoDigitado);
 
 	//nome
 	cout << "Digite o nome do Chocolate: " << endl;
