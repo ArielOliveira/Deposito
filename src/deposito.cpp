@@ -14,8 +14,8 @@ void Deposito::adicionarProduto(Produto produto) {
 
 void Deposito::removerProduto(string nome) {
 	int i = 1;
-	while(l->getData(i).getNome() != nome) i++;
-
+	//while(l->getData(i).getNome() != nome) i++;
+	l->getData(i).getPreco();
 	l->removeAt(i-1);
 }
 

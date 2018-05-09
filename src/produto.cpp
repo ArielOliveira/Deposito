@@ -37,3 +37,19 @@ ostream& operator<< (ostream &o, Produto const _produto) {
 
 	return o;
 }
+
+istream& operator>> (istream &i, Produto &_produto) {
+	//i >> _produto.nome;
+	//i.ignore();
+	i >> _produto.marca;
+	i.ignore();
+	i >> _produto.descricao;
+	i.ignore();
+	i >> _produto.dataFabricacao;
+	i.ignore();
+	i >> _produto.preco;
+	i.ignore();
+
+	return i;
+}
+

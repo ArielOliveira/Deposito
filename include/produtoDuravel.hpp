@@ -3,14 +3,8 @@
 
 #include "produto.hpp"
 
-#include <ostream>
-using std::ostream;
-
-#include <string>
-using std::string;
-
 class ProdutoDuravel : public Produto {
-	private:
+	protected:
 		string materialPredominante;
 		int durabilidade;
 
@@ -27,6 +21,8 @@ class ProdutoDuravel : public Produto {
 		string getMaterialPredominante();
 
 		friend ostream& operator<< (ostream &o, ProdutoDuravel const _produtoDuravel);
+
+		friend istream& operator>> (istream &i, ProdutoDuravel &_produtoDuravel);
 };
 
 #endif

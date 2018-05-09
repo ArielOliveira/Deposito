@@ -1,12 +1,13 @@
 #include "carro.hpp"
 
-Carro::Carro(string nome, string marca, string descricao, string dataFabricacao, double preco,
+Carro::Carro(string marca, string descricao, string dataFabricacao, double preco,
 				string materialPredominante, int durabilidade, 
-					string modelo, string cor, string placa) : 
-						ProdutoDuravel(nome, marca, descricao, dataFabricacao, preco, materialPredominante, durabilidade), 
+					string modelo, string cor, string placa) :
+						ProdutoDuravel("Carro", marca, descricao, dataFabricacao, preco, materialPredominante, durabilidade), 
 							modelo(modelo), cor(cor), placa(placa) {}
 
 Carro::Carro() {
+	nome = "Carro";
 	modelo = "";
 	cor = "";
 	placa = "";
@@ -30,4 +31,14 @@ ostream& operator<< (ostream &o, Carro const _carro) {
 	  << _carro.placa << endl;
 
 	return o;
+}
+
+istream& operator>> (istream &i, Carro &_carro) {
+	i >> _carro.modelo;
+	i.ignore();
+	i >> _carro.cor;
+	i.ignore();
+	i >> _carro.placa;
+
+	return i;
 }

@@ -5,7 +5,7 @@ ProdutoNaoDuravel::ProdutoNaoDuravel(string nome, string marca, string descricao
 											Produto(nome, marca, descricao, dataFabricacao, preco), 
 												dataValidade(dataValidade), genero(genero) {}
 
-ProdutoNaoDuravel::ProdutoNaoDuravel()
+ProdutoNaoDuravel::ProdutoNaoDuravel() : Produto()
 {
     dataValidade = "";
     genero = "";
@@ -25,4 +25,13 @@ ostream& operator<< (ostream &o, ProdutoNaoDuravel const _produtoNaoDuravel) {
 	  << _produtoNaoDuravel.genero << endl;
 
 	return o;
+}
+
+istream& operator>> (istream &i, ProdutoNaoDuravel &_produtoNaoDuravel) {
+	i >> _produtoNaoDuravel.dataValidade;
+	i.ignore();
+	i >> _produtoNaoDuravel.genero;
+	i.ignore();
+
+	return i;
 }

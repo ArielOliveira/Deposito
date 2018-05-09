@@ -1,12 +1,7 @@
 #ifndef CARRO_HPP
 #define CARRO_HPP
 
-#include <iostream>
-#include <string>
 #include "produtoDuravel.hpp"
-
-#include <ostream>
-using std::ostream;
 
 class Carro : public ProdutoDuravel {
 	private:
@@ -15,7 +10,7 @@ class Carro : public ProdutoDuravel {
 		string placa;
 
 	public:
-		Carro(string nome, string marca, string descricao, string dataFabricacao, double preco, 
+		Carro(string marca, string descricao, string dataFabricacao, double preco, 
 				string materialPredominante, int durabilidade,
 					string modelo, string cor, string placa);
 	 	Carro();
@@ -31,6 +26,8 @@ class Carro : public ProdutoDuravel {
 		string getCor();
 
 		friend ostream& operator<< (ostream &o, Carro const _carro);
+
+		friend istream& operator>> (istream &i, Carro &_carro);
 };
 
 #endif

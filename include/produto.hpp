@@ -10,8 +10,11 @@ using std::string;
 #include <ostream>
 using std::ostream;
 
+#include <istream>
+using std::istream;
+
 class Produto {
-	private:
+	protected:
 		string nome;
 		string marca;
 		string descricao;
@@ -39,6 +42,8 @@ class Produto {
 		string getDataFabricacao();
 
 		friend ostream& operator<< (ostream &o, Produto const _produto);
+
+		friend istream& operator>> (istream &i, Produto &_produto);
 };
 
 

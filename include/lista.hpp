@@ -1,5 +1,5 @@
-#ifndef ARIELSLIB_LIST_H
-#define ARIELSLIB_LIST_H
+#ifndef LIST_H
+#define LIST_H
 
 #include <iostream>
 using std::cout;

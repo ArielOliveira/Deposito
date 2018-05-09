@@ -25,3 +25,12 @@ ostream& operator<< (ostream &o, ProdutoDuravel const _produtoDuravel) {
 
 	return o;
 }
+
+istream& operator>> (istream &i, ProdutoDuravel &_produtoDuravel) {
+	i >> _produtoDuravel.materialPredominante;
+	i.ignore();
+	i >> _produtoDuravel.durabilidade;
+	i.ignore();
+	
+	return i;
+}

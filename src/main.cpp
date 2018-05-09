@@ -1,6 +1,13 @@
 #include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
 #include <string>
 #include <sstream>
+
+#include <fstream>
+using std::ifstream;
 
 #include "carro.hpp"
 #include "celular.hpp"
@@ -10,22 +17,28 @@
 #include "refrigerante.hpp"
 #include "chocolate.hpp"
 
-using namespace std;
-
-void cadastrarProdutoMenu();
-void cadastrarCarro();
-void cadastrarCelular();
-void cadastrarLivro();
-
-void cadastrarPizza();
-void cadastrarRefrigerante();
-void cadastrarChocolate();
 
 int main()
 {
 	string str;
-	int opcao = 99;
+	//int opcao = 99;
 
+	ifstream file;
+
+	Carro *carro = new Carro();
+
+	file.open("./data/produtos.csv");
+
+	if (!file) {
+		cout << "Erro ao abrir arquivo!" << endl;
+	} else {
+		file >> *carro;
+	}	
+
+	cout << *carro;
+
+	
+/*
 	while (opcao != 0)
 	{
 
@@ -73,10 +86,11 @@ int main()
 			break;
 		}
 	}
+	*/
 
 	return 0;
 }
-
+/*
 void cadastrarProdutoMenu()
 {
 	int opcao = 99;
@@ -377,3 +391,5 @@ void cadastrarChocolate()
 
 	//TODO: fazer o cast de Chocolate pra produto e inserir na lista
 }
+
+*/

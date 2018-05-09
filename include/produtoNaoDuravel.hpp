@@ -1,17 +1,11 @@
 #ifndef PRODUTO_NAO_DURAVEL_HPP
 #define PRODUTO_NAO_DURAVEL_HPP
 
-#include <string>
-using std::string;
-
-#include <ostream>
-using std::ostream;
-
 #include "produto.hpp"
 
 
 class ProdutoNaoDuravel : public Produto {
-	private:
+	protected:
 		string dataValidade;
 		string genero;
 
@@ -28,6 +22,8 @@ class ProdutoNaoDuravel : public Produto {
 		string getGenero();
 		
 		friend ostream& operator<< (ostream &o, ProdutoNaoDuravel const _produtoNaoDuravel);
+
+		friend istream& operator>> (istream &i, ProdutoNaoDuravel &_produtoNaoDuravel);
 };
 
 #endif

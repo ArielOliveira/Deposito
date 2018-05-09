@@ -1,10 +1,19 @@
 lista = ./bin/lista
 
+INC_DIR = ./include
+SRC_DIR = ./src
+OBJ_DIR = ./build
+BIN_DIR = ./bin
+DOC_DIR = ./doc
+LIB_DIR = ./lib
+
 CC = g++
 
 CPPFLAGS = -Wall -pedantic -ansi -std=c++11
 
 OBJS = ./build/main.o ./build/deposito.o ./build/produto.o ./build/produtoDuravel.o ./build/produtoNaoDuravel.o ./build/carro.o ./build/celular.o ./build/chocolate.o ./build/livro.o ./build/pizza.o ./build/refrigerante.o
+
+RM = rm -rf
 
 lista: $(lista)
 
@@ -45,6 +54,10 @@ $(lista): $(OBJS)
 ./build/refrigerante.o: ./src/refrigerante.cpp ./include/refrigerante.hpp
 	$(CC) -c $(CPPFLAGS) $<	-o $@
 
+
+debug: CPPFLAGS += -g -O0
+debug: lista
+
 dir:
 	mkdir -p bin
 	mkdir -p build
@@ -54,5 +67,10 @@ dir:
 	mkdir -p doc
 	mkdir -p lib
 	mkdir -p test
+
+clean:
+	$(RM) $(BIN_DIR)/*
+	$(RM) $(OBJ_DIR)/*
+
 	
 	
