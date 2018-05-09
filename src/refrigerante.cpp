@@ -23,3 +23,4 @@ string Refrigerante::getSabor() { return sabor; }
 
 void Refrigerante::setVolume(double volume) { this->volume = volume; }
 double Refrigerante::getVolume() { return volume; }
+
