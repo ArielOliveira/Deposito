@@ -1,9 +1,6 @@
 #ifndef CELULAR_HPP
 #define CELULAR_HPP
 
-#include <string>
-using std::string;
-
 #include "produtoDuravel.hpp"
 
 class Celular : public ProdutoDuravel {
@@ -12,6 +9,8 @@ class Celular : public ProdutoDuravel {
 		string fabricante;
 
 		int armazenamento;
+
+		void dadosCelular(istream &i);
 
 	public:
 		Celular(string nome, string marca, string descricao, string dataFabricacao, double preco,
@@ -28,6 +27,10 @@ class Celular : public ProdutoDuravel {
 
 		void setArmazenamento(int armazenamento);
 		int getArmazenamento();
+
+		friend ostream& operator<< (ostream &o, Celular const &_celular);
+
+		friend istream& operator>> (istream &i, Celular &_celular);
 
 };
 

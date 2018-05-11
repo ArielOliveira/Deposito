@@ -18,19 +18,20 @@ string ProdutoDuravel::getMaterialPredominante() {return materialPredominante;}
 void ProdutoDuravel::setDurabilidade(int durabilidade) {this->durabilidade = durabilidade;}
 int ProdutoDuravel::getDurabilidade() {return durabilidade;}
 
-ostream& operator<< (ostream &o, ProdutoDuravel const _produtoDuravel) {
-	o << (Produto)_produtoDuravel << endl
+ostream& operator<< (ostream &o, ProdutoDuravel const &_produtoDuravel) {
+	o << (Produto&)_produtoDuravel << endl
 	  << _produtoDuravel.materialPredominante << endl
 	  << _produtoDuravel.durabilidade << endl;	
 
 	return o;
 }
 
-istream& operator>> (istream &i, ProdutoDuravel &_produtoDuravel) {
-	i >> _produtoDuravel.materialPredominante;
-	i.ignore();
-	i >> _produtoDuravel.durabilidade;
-	i.ignore();
+void ProdutoDuravel::dadosDurabilidade(istream &i) {
+	string valor;
+
+	getline(i, valor, ';');
+	materialPredominante = valor;
 	
-	return i;
+	i >> durabilidade;
+	i.ignore();
 }

@@ -28,7 +28,7 @@ string Produto::getDescricao() {return descricao;}
 void Produto::setDataFabricacao(string dataFabricacao) {this->dataFabricacao = dataFabricacao;}
 string Produto::getDataFabricacao() {return dataFabricacao;}
 
-ostream& operator<< (ostream &o, Produto const _produto) {
+ostream& operator<< (ostream &o, Produto const &_produto) {
 	o << _produto.nome << endl
 	  << _produto.marca << endl	
 	  << _produto.descricao << endl
@@ -38,18 +38,19 @@ ostream& operator<< (ostream &o, Produto const _produto) {
 	return o;
 }
 
-istream& operator>> (istream &i, Produto &_produto) {
-	//i >> _produto.nome;
-	//i.ignore();
-	i >> _produto.marca;
-	i.ignore();
-	i >> _produto.descricao;
-	i.ignore();
-	i >> _produto.dataFabricacao;
-	i.ignore();
-	i >> _produto.preco;
-	i.ignore();
+void Produto::dadosProduto(istream& i) {
+	string valor;
+	
+	getline(i, valor, ';');
+	marca = valor;
 
-	return i;
+	getline(i, valor, ';');
+	descricao = valor;
+
+	getline(i, valor, ';');
+	dataFabricacao = valor;
+
+	i >> preco;
+	i.ignore();
 }
 

@@ -19,19 +19,20 @@ string ProdutoNaoDuravel::getDataValidade() { return dataValidade; }
 void ProdutoNaoDuravel::setGenero(string genero) { this->genero = genero; }
 string ProdutoNaoDuravel::getGenero() { return genero; }
 
+void ProdutoNaoDuravel::dadosValidade(istream &i) {
+	string valor;
+
+	getline(i, valor, ';');
+	dataValidade = valor;
+
+	getline(i, valor, ';');
+	genero = valor;
+}
+
 ostream& operator<< (ostream &o, ProdutoNaoDuravel const _produtoNaoDuravel) {
 	o << (Produto)_produtoNaoDuravel << endl
 	  << _produtoNaoDuravel.dataValidade << endl
 	  << _produtoNaoDuravel.genero << endl;
 
 	return o;
-}
-
-istream& operator>> (istream &i, ProdutoNaoDuravel &_produtoNaoDuravel) {
-	i >> _produtoNaoDuravel.dataValidade;
-	i.ignore();
-	i >> _produtoNaoDuravel.genero;
-	i.ignore();
-
-	return i;
 }

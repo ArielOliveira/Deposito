@@ -8,6 +8,8 @@ class ProdutoDuravel : public Produto {
 		string materialPredominante;
 		int durabilidade;
 
+		void dadosDurabilidade(istream &i);
+
 	public:
 		ProdutoDuravel(string nome, string marca, string descricao, string dataFabricacao, double preco, 
 						string materialPredominante, int durabilidade);
@@ -20,9 +22,7 @@ class ProdutoDuravel : public Produto {
 		void setMaterialPredominante(string materialPredominante);
 		string getMaterialPredominante();
 
-		friend ostream& operator<< (ostream &o, ProdutoDuravel const _produtoDuravel);
-
-		friend istream& operator>> (istream &i, ProdutoDuravel &_produtoDuravel);
+		friend ostream& operator<< (ostream &o, ProdutoDuravel const &_produtoDuravel);
 };
 
 #endif

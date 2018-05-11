@@ -24,8 +24,8 @@ string Carro::getCor() {return cor;}
 void Carro::setPlaca(string placa) {this->placa = placa;}
 string Carro::getPlaca() {return placa;}
 
-ostream& operator<< (ostream &o, Carro const _carro) {
-	o << (ProdutoDuravel)_carro << endl
+ostream& operator<< (ostream &o, Carro const &_carro) {
+	o << (ProdutoDuravel&)_carro << endl
 	  << _carro.modelo << endl
 	  << _carro.cor << endl
 	  << _carro.placa << endl;
@@ -33,12 +33,23 @@ ostream& operator<< (ostream &o, Carro const _carro) {
 	return o;
 }
 
+void Carro::dadosCarro(istream &i) {
+	string valor;
+
+	getline(i, valor, ';');
+	modelo = valor;
+	
+	getline(i, valor, ';');
+	cor = valor;
+
+	getline(i, valor, ';');
+	placa = valor;
+}
+
 istream& operator>> (istream &i, Carro &_carro) {
-	i >> _carro.modelo;
-	i.ignore();
-	i >> _carro.cor;
-	i.ignore();
-	i >> _carro.placa;
+	_carro.dadosProduto(i);
+	_carro.dadosDurabilidade(i);
+	_carro.dadosCarro(i);
 
 	return i;
 }

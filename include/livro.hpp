@@ -13,6 +13,8 @@ class Livro : public ProdutoDuravel {
 		string genero;
 
 		int numPaginas;
+
+		void dadosLivro(istream &i);
 	public:
 		Livro(string nome, string marca, string descricao, string dataFabricacao, double preco,
 				string materialPredominante, int durabilidade, 
@@ -31,6 +33,10 @@ class Livro : public ProdutoDuravel {
 
 		void setNumPaginas(int numPaginas);
 		int getNumPaginas();
+
+		friend ostream& operator<< (ostream &o, Livro const &_livro);
+
+		friend istream& operator>> (istream &i, Livro &_livro);
 };
 
 #endif

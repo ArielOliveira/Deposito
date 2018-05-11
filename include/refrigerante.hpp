@@ -11,6 +11,8 @@ class Refrigerante : public ProdutoNaoDuravel {
 		string sabor;
 		double volume;
 
+		void dadosRefrigerante(istream &i);
+
 	public:
 		Refrigerante(string nome, string marca, string descricao, string dataFabricacao, double preco, 
 						string dataValidade, string genero,
@@ -23,6 +25,10 @@ class Refrigerante : public ProdutoNaoDuravel {
 
 		void setVolume(double volume);
 		double getVolume();
+
+		friend ostream& operator<< (ostream &o, Refrigerante const &_refrigerante);
+
+		friend istream& operator>> (istream &i, Refrigerante &_refrigerante);
 
 };
 

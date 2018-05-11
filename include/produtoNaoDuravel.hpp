@@ -9,6 +9,8 @@ class ProdutoNaoDuravel : public Produto {
 		string dataValidade;
 		string genero;
 
+		void dadosValidade(istream &i);
+
 	public:
 		ProdutoNaoDuravel(string nome, string marca, string descricao, string dataFabricacao, double preco, 
 							string dataValidade, string genero);
@@ -22,8 +24,6 @@ class ProdutoNaoDuravel : public Produto {
 		string getGenero();
 		
 		friend ostream& operator<< (ostream &o, ProdutoNaoDuravel const _produtoNaoDuravel);
-
-		friend istream& operator>> (istream &i, ProdutoNaoDuravel &_produtoNaoDuravel);
 };
 
 #endif

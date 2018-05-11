@@ -10,6 +10,8 @@ class Chocolate : public ProdutoNaoDuravel {
 		string tipo;
 		string fabricante;
 
+		void dadosChocolate(istream &i);
+
 	public:
 		Chocolate(string nome, string marca, string descricao, string dataFabricacao, double preco,
 					string dataValidade, string genero, 
@@ -22,6 +24,10 @@ class Chocolate : public ProdutoNaoDuravel {
 		
 		void setFabricante(string fabricante);
 		string getFabricante();
+
+		friend ostream& operator<< (ostream &o, Chocolate const &_chocolate);
+
+		friend istream& operator>> (istream &i, Chocolate &_chocolate);
 
 };
 

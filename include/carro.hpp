@@ -9,6 +9,8 @@ class Carro : public ProdutoDuravel {
 		string cor;
 		string placa;
 
+		void dadosCarro(istream &i);
+
 	public:
 		Carro(string marca, string descricao, string dataFabricacao, double preco, 
 				string materialPredominante, int durabilidade,
@@ -25,7 +27,7 @@ class Carro : public ProdutoDuravel {
 		void setCor(string cor);
 		string getCor();
 
-		friend ostream& operator<< (ostream &o, Carro const _carro);
+		friend ostream& operator<< (ostream &o, Carro const &_carro);
 
 		friend istream& operator>> (istream &i, Carro &_carro);
 };
